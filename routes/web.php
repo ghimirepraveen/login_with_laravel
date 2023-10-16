@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 Route::get('login', [AuthController::class,'index'])->name('login');
+
 Route::get('register', [AuthController::class,'register_view'])->name('register');
+Route::get('/home', [AuthController::class,'home'])->name('home');
